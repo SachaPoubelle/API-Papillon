@@ -1,0 +1,135 @@
+{
+  "lastupdated": "2024-03-24",
+  "team": [
+    {
+      "name": "Mainteneurs",
+      "member": [
+        {
+          "name": "Vince (ecnivtwelve)",
+          "role": "Fondateur",
+          "avatar": "https://avatars.githubusercontent.com/u/32978709?v=4&s=100",
+          "link": "https://github.com/ecnivtwelve"
+        },
+        {
+          "name": "Lucas (Tryon)",
+          "role": "Mainteneur",
+          "avatar": "https://avatars.githubusercontent.com/u/68423470?v=4&s=100",
+          "link": "https://tryon-lab.fr/"
+        },
+        {
+          "name": "Maël Gangloff",
+          "role": "Mainteneur",
+          "avatar": "https://avatars.githubusercontent.com/u/51171251?v=4",
+          "link": "https://maelgangloff.fr/"
+        },
+        {
+          "name": "Olivier T.",
+          "role": "Mainteneur",
+          "avatar": "https://avatars.githubusercontent.com/u/69359417?v=4",
+          "link": "https://github.com/Vilerio"
+        }
+      ]
+    },
+    {
+      "name": "Contributeurs",
+      "member": [
+        {
+          "name": "Mikkel (Vexcited)",
+          "role": "Créateur de Pawnote",
+          "avatar": "https://avatars.githubusercontent.com/u/59152884?v=4&s=100",
+          "link": "https://github.com/Vexcited"
+        },
+        {
+          "name": "Yann Renard (Yannou)",
+          "role": "Développement & communication",
+          "avatar": "https://avatars.githubusercontent.com/u/76118368?v=4&s=100",
+          "link": "https://github.com/yannouuuu"
+        },
+        {
+          "name": "Lucas (Luc'Hack)",
+          "role": "Développement backend",
+          "avatar": "https://avatars.githubusercontent.com/u/39491773?v=4&s=100",
+          "link": "https://luchack.valbion.com/"
+        },
+        {
+          "name": "nonozgytb",
+          "role": "Intégration Skolengo",
+          "avatar": "https://avatars.githubusercontent.com/u/38505087?v=4",
+          "link": "https://github.com/NonozgYtb"
+        },
+        {
+          "name": "LeGeek01",
+          "role": "Intégration EcoleDirecte",
+          "avatar": "https://avatars.githubusercontent.com/u/54872374?v=4",
+          "link": "https://github.com/LeGeek01"
+        },
+        {
+          "name": "Azgar (azgaresncf)",
+          "role": "Intégration EcoleDirecte",
+          "avatar": "https://avatars.githubusercontent.com/u/50982832?v=4",
+          "link": "https://github.com/azgaresncf"
+        },{
+          "name": "Diego Finocchiaro (diegofino15)",
+          "role": "Intégration EcoleDirecte",
+          "avatar": "https://avatars.githubusercontent.com/u/86893312?v=4",
+          "link": "https://github.com/diegofino15"
+        },
+        {
+          "name": "Armand (Camarm)",
+          "role": "Intégration EcoleDirecte",
+          "avatar": "https://avatars.githubusercontent.com/u/77529508?v=4",
+          "link": "https://www.camarm.dev/"
+        },
+        {
+          "name": "LeMaitre4523",
+          "role": "Intégration EcoleDirecte",
+          "avatar": "https://avatars.githubusercontent.com/u/79224590?v=4",
+          "link": "https://github.com/LeMaitre4523"
+        },
+        {
+          "name": "Rémy Godet",
+          "role": "Intégration TurboSelf",
+          "avatar": "https://avatars.githubusercontent.com/u/77058107?v=4",
+          "link": "https://github.com/godetremy"
+        },
+        {
+          "name": "Anaël (Shidoss)",
+          "role": "Design",
+          "avatar": "https://avatars.githubusercontent.com/u/143846034?v=4",
+          "link": "https://anaelchevillard.com/"
+        },
+        {
+          "name": "Nicolas (andronedev)",
+          "role": "Contributeur",
+          "avatar": "https://avatars.githubusercontent.com/u/31452517?v=4&s=100",
+          "link": "https://androne.dev/"
+        },
+        {
+          "name": "Tom Theret (Crash System)",
+          "role": "Contributeur",
+          "avatar": "https://avatars.githubusercontent.com/u/33373907?v=4",
+          "link": "https://github.com/tom-theret"
+        },
+        {
+          "name": "Bryan (Ahhj93)",
+          "role": "Contributeur",
+          "avatar": "https://avatars.githubusercontent.com/u/69793084?v=4",
+          "link": "https://github.com/Ahhj93"
+        },
+        {
+          "name": "Orion",
+          "role": "Contributeur",
+          "avatar": "https://avatars.githubusercontent.com/u/38093786?v=4",
+          "link": "https://github.com/oriionn"
+        },
+        {
+          "name": "Skythrew",
+          "role": "Contributeur",
+          "avatar": "https://avatars.githubusercontent.com/u/76571984?v=4",
+          "link": "https://github.com/Skythrew"
+        }
+      ]
+    }
+
+  ]
+}
