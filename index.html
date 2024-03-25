@@ -3,21 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API Example</title>
+    <title>Fetch Team Data</title>
 </head>
 <body>
-    <h1>API Example</h1>
-    <button onclick="fetchTeamData()">Fetch Team Data</button>
-    <div id="teamData"></div>
+    <div id="team-container"></div>
 
     <script>
-        async function fetchTeamData() {
-            const response = await fetch('/team');
-            const data = await response.json();
-            document.getElementById('teamData').innerText = JSON.stringify(data, null, 2);
-        }
-    </script>
+        // Effectuer une requête fetch vers l'API /team
+        fetch('http://localhost:3000/team')
+            .then(response => response.json())
+            .then(data => {
+                // Manipuler les données de l'équipe et les afficher dans la page
+                const teamContainer = document.getElementById('team-container');
+                teamContainer.innerHTML = '<h2>Équipe</h2>';
 
-    <script src="api.js"></script>
+                data.team.forEach(group => {
+                    const groupDiv = document.createElement('div');
+                    groupDiv.innerHTML = `<h3>${group.name}</h3>`;
+                    const memberList = document.createElement('ul');
+
+                    group.member.forEach(member => {
+                        const memberItem = document.createElement('li');
+                        memberItem.innerHTML = `<strong>${member.name}</strong>: ${member.role}`;
+                        memberList.appendChild(memberItem);
+                    });
+
+                    groupDiv.appendChild(memberList);
+                    teamContainer.appendChild(groupDiv);
+                });
+            })
+            .catch(error => {
+                console.error('Erreur lors de la récupération des données de l\'équipe :', error);
+            });
+    </script>
 </body>
 </html>
