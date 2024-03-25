@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Example</title>
+</head>
+<body>
+    <h1>API Example</h1>
+    <button onclick="fetchTeamData()">Fetch Team Data</button>
+    <div id="teamData"></div>
+
+    <script>
+        async function fetchTeamData() {
+            const response = await fetch('/team');
+            const data = await response.json();
+            document.getElementById('teamData').innerText = JSON.stringify(data, null, 2);
+        }
+    </script>
+
+    <script src="api.js"></script>
+</body>
+</html>
