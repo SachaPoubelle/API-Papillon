@@ -1,1 +1,83 @@
-{"status":"ok","message":"server is running","server":"8b8aea0cf341","version":"3.11.3","ent_list":[{"name":"Aucun ENT","url":"index-education.net","py":""},{"name":"Acad\u00e9mie de la R\u00e9union (M\u00e9tice)","url":"sso.ac-reunion.fr","py":"ac_reunion","educonnect":true},{"name":"Acad\u00e9mie de Montpellier (Mon ENT Occitanie)","url":"cas.mon-ent-occitanie.fr","py":"occitanie_montpellier_educonnect","educonnect":true},{"name":"Acad\u00e9mie de Rennes (Toutatice)","url":"www.toutatice.fr","py":"ac_rennes","educonnect":true},{"name":"Acad\u00e9mie de Toulouse (Mon ENT Occitanie)","url":"cas.mon-ent-occitanie.fr","py":"occitanie_toulouse_edu","educonnect":true},{"name":"Acad\u00e9mie d'Orl\u00e9ans-Tours (Net O'Centre)","url":"ent.netocentre.fr","py":"ac_orleans_tours","educonnect":true},{"name":"Acad\u00e9mie de Poitiers","url":"sp-ts.ac-poitiers.fr","py":"ac_poitiers","educonnect":true},{"name":"Agora 06","url":"cas.agora06.fr","py":"cas_agora06","educonnect":true},{"name":"Arsene76","url":"cas.arsene76.fr","py":"cas_arsene76","educonnect":true},{"name":"Arsene76 via \u00c9duConnect","url":"cas.arsene76.fr","py":"cas_arsene76_edu","educonnect":true},{"name":"Atrium Sud","url":"www.atrium-sud.fr","py":"atrium_sud"},{"name":"CyberColleges42 via \u00c9duConnect","url":"cas.cybercolleges42.fr","py":"cas_cybercolleges42_edu","educonnect":true},{"name":"e-Co\/\/\u00e8ge 31","url":"cas.ecollege.haute-garonne.fr","py":"ecollege_haute_garonne"},{"name":"e-Co\/\/\u00e8ge 31 via \u00c9duConnect","url":"cas.ecollege.haute-garonne.fr","py":"ecollege_haute_garonne_edu","educonnect":true},{"name":"e-Lyco","url":"cas3.e-lyco.fr","py":"ent_elyco","educonnect":true},{"name":"\u00c9CLAT-BFC","url":"cas.eclat-bfc.fr","py":"eclat_bfc","educonnect":true},{"name":"\u00c9duConnect sans ENT","url":"hubeduconnect.index-education.net","py":"prn_educonnect","educonnect":true},{"name":"ENC Hauts-de-Seine","url":"enc.hauts-de-seine.fr","py":"enc_hauts_de_seine"},{"name":"ENT27","url":"cas.ent27.fr","py":"cas_ent27"},{"name":"L'ENT Creuse","url":"cas.entcreuse.fr","py":"ent_creuse"},{"name":"ENT27","url":"cas.ent27.fr","py":"cas_ent27"},{"name":"ENT77","url":"ent.ecollege78.fr","py":"ent_ecollege78"},{"name":"ENT94 (NEO)","url":"ent94.opendigitaleducation.com","py":"ent_94"},{"name":"eColl\u00e8ge Yvelines","url":"ent77.seine-et-marne.fr","py":"ent77"},{"name":"ENT Hauts-de-France","url":"connexion.enthdf.fr","py":"ent_hdf","educonnect":true},{"name":"ENT Mayotte","url":"mayotte.opendigitaleducation.com","py":"ent_mayotte"},{"name":"Extranet Coll\u00e8ges de la Somme","url":"www.colleges.cg80.fr","py":"extranet_colleges_somme"},{"name":"La Classe (Grand Lyon)","url":"www.laclasse.com","py":"laclasse_lyon"},{"name":"La Classe (Grand Lyon) via \u00c9duConnect","url":"www.laclasse.com","py":"laclasse_educonnect","educonnect":true},{"name":"L'\u00c9duc de Normandie via \u00c9duConnect","url":"connexion.l-educdenormandie.fr","py":"l_normandie","educonnect":true},{"name":"Lyc\u00e9e Connect\u00e9","url":"mon.lyceeconnecte.fr","py":"lyceeconnecte_aquitaine","educonnect":false},{"name":"Lyc\u00e9e Connect\u00e9 via \u00c9duConnect","url":"mon.lyceeconnecte.fr","py":"lyceeconnecte_edu","educonnect":true},{"name":"Ma Classe en Auvergne Rh\u00f4ne-Alpes via \u00c9duConnect","url":"cas.ent.auvergnerhonealpes.fr","py":"ent_auvergnerhonealpe","educonnect":true},{"name":"Mon Bureau Num\u00e9rique via \u00c9duConnect","url":"cas.monbureaunumerique.fr","py":"monbureaunumerique","educonnect":true},{"name":"Mon Coll\u00e8ge du Val d'Oise","url":"cas.moncollege.valdoise.fr","py":"val_doise"},{"name":"Mon Coll\u00e8ge (Essonne)","url":"www.moncollege-ent.essonne.fr","py":"ent_essonne"},{"name":"Mon Coll\u00e8ge (Var)","url":"moncollege-ent.var.fr","py":"ent_var"},{"name":"MonLyc\u00e9e.net","url":"ent.iledefrance.fr","py":"ile_de_france"},{"name":"N\u00e9o Connect","url":"neoconnect.opendigitaleducation.com","py":"neoconnect_guadeloupe"},{"name":"OS\u00c9 (Argos 2.0)","url":"ds.ac-bordeaux.fr","py":"ent2d_bordeaux"},{"name":"Paris Classe Num\u00e9rique","url":"ent.parisclassenumerique.fr","py":"paris_classe_numerique"},{"name":"Skolengo","url":"*.skolengo.com","py":"cas_kosmos"},{"name":"Webcoll\u00e8ge","url":"cas.webcollege.seinesaintdenis.fr","py":"cas_seinesaintdenis_edu","educonnect":true}]}
+import express, { Request, Response } from 'express';
+import axios from 'axios';
+import * as fs from 'fs';
+
+const app = express();
+const PORT = 3000;
+
+// Liste des mainteneurs
+const mainteneurs = ['Vilerio', 'ecnivtwelve', 'maelgangloff', 'tryon-dev'];
+
+// Liste des contributeurs vérifiés
+const contributeursVerifies = ['lucas-luchack', 'Rexxt', 'skythrew', 
+                               'tom-theret', 'LeMaitre4523', 'yannouuuu', 
+                               'oriionn', 'LeGeek01', 'Vexcited', 
+                               'NonozgYtb', 'Ahhj93', 'godetremy', ];
+
+// Fonction pour lire un fichier JSON
+function responseFile(path: string): any {
+    return JSON.parse(fs.readFileSync(path, "utf8"));
+}
+
+// Fonction pour obtenir le rôle du contributeur en fonction de son nom
+function getRole(name: string): string {
+    if (mainteneurs.includes(name)) {
+        return 'Mainteneur';
+    } else if (contributeursVerifies.includes(name)) {
+        return 'Contributeur vérifié';
+    } else {
+        return 'Contributeur';
+    }
+}
+
+app.get('/', (req: Request, res: Response) => {
+    res.send('PapiAPI est joignable !');
+});
+
+app.get('/team', async (req: Request, res: Response) => {
+    try {
+        const response = await axios.get('https://api.github.com/repos/PapillonApp/Papillon/contributors');
+        const teamData = response.data.reduce((acc: any, contributor: any) => {
+            const role = getRole(contributor.login);
+            const member = { name: contributor.login, role, avatar: contributor.avatar_url, link: contributor.html_url };
+            if (role === 'Mainteneur') {
+                acc[0].member.push(member);
+            } else if (role === 'Contributeur vérifié') {
+                acc[1].member.push(member);
+            } else {
+                acc[2].member.push(member);
+            }
+            return acc;
+        }, [
+            { name: 'Mainteneurs', member: [] },
+            { name: 'Contributeurs Vérifiés', member: [] },
+            { name: 'Contributeurs', member: [] }
+        ]);
+        const teamJson = {
+            lastupdated: new Date().toISOString(),
+            team: teamData
+        };
+        res.json(teamJson);
+    } catch (error) {
+        res.status(500).json({ error: 'Une erreur s\'est produite lors de la récupération des données de l\'équipe depuis GitHub.' });
+    }
+});
+
+// Renvoie le contenu du fichier JSON des messages
+app.get('/messages', (req: Request, res: Response) => {
+    res.json(responseFile("data/json/messages.json"));
+});
+
+// Renvoie le contenu du fichier JSON de la dernière version pour une plateforme donnée
+app.get('/latestVersion/:platform', (req: Request, res: Response) => {
+    res.json(responseFile(`data/json/latestVersion${req.params.platform}.json`));
+});
+
+// Renvoie le contenu du fichier JSON du personnel avec le nom spécifié dans le paramètre
+app.get('/staff/:name/photo', (req: Request, res: Response) => {
+    res.json(responseFile(`data/img/staff_${req.params.name}.json`));
+});
+
+app.listen(PORT, () => {
+    console.log(`PapiAPI est joignable via le port ${PORT} !`);
+});
